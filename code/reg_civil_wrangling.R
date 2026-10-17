@@ -17,6 +17,15 @@ if(!require(DataCombine)) install.packages("DataCombine", repos = "http://cran.u
 
 # Cargar bases de datos (descargadas del INEC) para la información del Registro Civil
 
+# Los .sav de 2011 a 2020 están en .gitignore; se descargan del INEC y se detiene el script si faltan
+archivos_edg <- paste0("data/", c(paste0("EDG_", c(2011:2016, 2018, 2020), ".sav"),
+                                   "BBD_EDG_2017_spss.sav", "BDD_EDG_2019.sav"))
+archivos_faltantes <- archivos_edg[!file.exists(archivos_edg)]
+if (length(archivos_faltantes) > 0) {
+  stop("Falta(n) en data/: ", paste(basename(archivos_faltantes), collapse = ", "),
+       ". Descárgalos de https://www.ecuadorencifras.gob.ec/defunciones-generales/")
+}
+
 deaths_2021 <- read_spss("data/EDG_2021.sav")
 deaths_2020 <- read_spss("data/EDG_2020.sav")
 deaths_2019 <- read_spss("data/BDD_EDG_2019.sav")
