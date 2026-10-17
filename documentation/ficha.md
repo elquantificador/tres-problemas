@@ -74,7 +74,8 @@ orden siguiente se deduce de los scripts. No hay `MASTER.R` ni `renv`.
    trabajo); las rutas son relativas a esa raíz.
 2. Descarga de INEC los archivos de defunciones generales 2011 a 2020 y
    colócalos en `data/` con los nombres que lee `code/reg_civil_wrangling.R`.
-   El de 2021 ya está en el repositorio.
+   El de 2021 ya está en el repositorio. Si falta alguno, el script se
+   detiene con un mensaje que lista los archivos ausentes.
 3. Ejecuta `code/femicidios_analisis.R`. Este script llama, en orden, a
    `code/reg_civil_wrangling.R`, `code/min_gob_wrangling.R` (que vuelve a
    llamar al anterior) y `code/fiscalia_denuncias_wrangling.R`, lee
