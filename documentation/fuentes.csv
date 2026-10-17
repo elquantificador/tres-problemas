@@ -1,0 +1,6 @@
+source_name,institution,period,official_url,downloaded_file,script
+Defunciones generales (mortalidad violenta por sexo),INEC,2011-2021,https://www.ecuadorencifras.gob.ec/defunciones-generales/,data/EDG_2021.sav (2011 a 2020 no versionados),code/reg_civil_wrangling.R
+Homicidios intencionales (femicidio),Ministerio de Gobierno,2010-2022,,data/homicidios_intencionales_mingob.xls,code/min_gob_wrangling.R
+Muertes de mujeres en contexto delictivo,Fiscalía General del Estado,2014-2022,https://www.fiscalia.gob.ec/analitica-muertes-de-mujeres-en-contexto-delictivo/,data/muertes_fem_fiscalia.csv,manual
+Noticias del delito (denuncias),Fiscalía General del Estado,2014-08-10 a 2022-09-30,https://www.fiscalia.gob.ec/estadisticas-fge/,data/fiscalia_denuncias.xlsx,manual
+Femicidios (mapeo de femi(ni)cidios),Fundación ALDEA,2014-2022,https://www.fundacionaldea.org/mapas,data/femicidios_aldea.xlsx,manual
